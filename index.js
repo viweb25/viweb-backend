@@ -56,7 +56,7 @@ User Question: ${userMessage}
     try {
         // Cohere Chat API
         const response = await cohere.chat({
-            model: "command-r-plus", // free tier: "command-r" (100k tokens/month free)
+            model: "command-r", // free tier: "command-r" (100k tokens/month free)
             message: prompt,
         });
 
