@@ -10,13 +10,10 @@ const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-app.use(cors(
-    {origin: ['https://www.viwebsync.com/'],
-            credentials:true,
-            method:["POST"]
-
-    }
-));
+app.use(cors({
+  origin: 'https://www.viwebsync.com',
+  credentials: true,
+}));
 
 // Initialize Cohere client
 const cohereApiKey = process.env.COHERE_API_KEY;
